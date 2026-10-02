@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Star Cabin</title>
+    <style>:root{--bg:#0b0c10;--panel:#0c0d12c7;--text:#e9e4da;--muted:#a39d92;--accent:#d9a066}html,body{background:var(--bg);height:100%;color:var(--text);margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;overflow:hidden}canvas{display:block}#hud{background:var(--panel);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:6px;max-width:min(360px,100vw - 32px);padding:12px 14px;position:fixed;top:16px;left:16px}#hud h1{margin:0 0 6px;font-size:15px;font-weight:600}#hud p{color:var(--muted);margin:0 0 6px}#hud kbd{color:var(--text);font:inherit;font-weight:600}#time-switch{background:#ffffff12;border-radius:6px;gap:2px;margin:10px 0 4px;padding:3px;display:flex}#time-switch button{color:var(--muted);cursor:pointer;background:0 0;border:0;border-radius:4px;flex:1;justify-content:center;align-items:center;gap:6px;padding:7px 10px;font:600 13px system-ui,sans-serif;display:flex}#time-switch button:hover{color:var(--text)}#time-switch button[aria-pressed=true]{background:var(--accent);color:#1a120a}#time-switch button:focus-visible{outline:2px solid var(--text);outline-offset:1px}#memory-sign{color:var(--muted);align-items:center;gap:8px;margin:8px 0 2px;display:flex}#memory-sign[hidden]{display:none}#memory-sign span{flex:1;min-width:0}#memory-sign button{color:var(--text);cursor:pointer;white-space:nowrap;background:#ffffff12;border:0;border-radius:4px;align-items:center;gap:6px;padding:7px 10px;font:600 13px system-ui,sans-serif;display:flex}#memory-sign button[hidden]{display:none}#memory-sign button:hover{background:#ffffff1f}#memory-sign button.primary{background:var(--accent);color:#1a120a}#memory-sign button:focus-visible{outline:2px solid var(--text);outline-offset:1px}#memory-login{box-sizing:border-box;background:var(--panel);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-align:center;border-radius:6px;width:min(420px,100vw - 32px);padding:18px 20px;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)}#memory-login[hidden]{display:none}#memory-login p{margin:0 0 14px}#memory-login div{justify-content:center;gap:8px;display:flex}#memory-login button{color:var(--text);cursor:pointer;background:#ffffff14;border:0;border-radius:4px;align-items:center;gap:8px;padding:10px 16px;font:600 14px system-ui,sans-serif;display:flex}#memory-login button.primary{background:var(--accent);color:#1a120a}#memory-login button[hidden]{display:none}#stats{font-variant-numeric:tabular-nums;color:var(--muted);white-space:pre;margin-top:6px}#enter{background:var(--accent);color:#1a120a;cursor:pointer;border:0;border-radius:6px;padding:12px 22px;font:600 15px system-ui,sans-serif;position:fixed;bottom:28px;left:50%;transform:translate(-50%)}#enter:disabled{color:#aaa;cursor:default;background:#444}#loading{color:var(--muted);place-items:center;display:grid;position:fixed;inset:0}</style>
+    <script type="module" crossorigin src="./assets/index-CTNYZWrR.js"></script>
+  </head>
+  <body>
+    <div id="loading">Loading the room…</div>
+    <div id="hud">
+      <h1>Star Cabin</h1>
+      <p>Desktop preview: drag to look, <kbd>W A S D</kbd> to walk, <kbd>E</kbd> use (a red book, the car button), <kbd>L</kbd> lie down on the nearest bed, <kbd>G</kbd> the time of day (night, golden hour, day), <kbd>K</kbd> change the lamps, <kbd>M</kbd> the control panel (click its buttons), <kbd>N</kbd> change the weather.</p>
+      <p>In VR: push a stick forward (or hold the trigger) to aim, let go to teleport (a grey arc means nowhere to land, pull the stick back to cancel); push a stick left/right to turn; grip uses what you point at; <kbd>A</kbd>/<kbd>X</kbd> lie down on the nearest bed, <kbd>B</kbd>/<kbd>Y</kbd> the time of day; turn your left wrist toward you (or click the left stick) for the control panel, point with the right hand and pull the trigger to press; click the right stick to change the lamps.</p>
+      <div id="time-switch" role="group" aria-label="Time of day">
+        <button type="button" data-time="night" aria-pressed="true">Night</button>
+        <button type="button" data-time="golden" aria-pressed="false">Golden hour</button>
+        <button type="button" data-time="day" aria-pressed="false">Day</button>
+      </div>
+      <div id="memory-sign" hidden>
+        <span id="memory-who"></span>
+        <button type="button" id="memory-button"></button>
+      </div>
+      <div id="stats"></div>
+    </div>
+    <div id="memory-login" hidden role="dialog" aria-labelledby="memory-login-text">
+      <p id="memory-login-text"></p>
+      <div>
+        <button type="button" id="memory-login-go" class="primary"></button>
+        <button type="button" id="memory-login-no">Not now</button>
+      </div>
+    </div>
+    <button id="enter" disabled>Checking VR support…</button>
+  </body>
+</html>

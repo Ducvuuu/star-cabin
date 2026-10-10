@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "huayra",
+    "name": "Pagani Huayra",
+    "file": "cars/huayra.glb",
+    "author": "Black Snow",
+    "license": "CC Attribution",
+    "url": "https://sketchfab.com/models/c2d61a9f53a54a229547bb76e4b71e25"
+  },
+  {
+    "slug": "terzo_millennio",
+    "name": "Lamborghini Terzo Millennio",
+    "file": "cars/terzo_millennio.glb",
+    "author": "SDC PERFORMANCE™️",
+    "license": "CC Attribution-NonCommercial",
+    "url": "https://sketchfab.com/models/7ad3dffa9d344c3c978eafcc220cb709"
+  },
+  {
+    "slug": "gt3_rs",
+    "name": "Porsche 911 GT3 RS",
+    "file": "cars/gt3_rs.glb",
+    "author": "Black Snow",
+    "license": "CC Attribution",
+    "url": "https://sketchfab.com/models/e738eae819c34d19a31dd066c45e0f3d"
+  },
+  {
+    "slug": "senna",
+    "name": "McLaren Senna",
+    "file": "cars/senna.glb",
+    "author": "Black Snow",
+    "license": "CC Attribution",
+    "url": "https://sketchfab.com/models/ea3e43a6eb004853a87fe9c58422eb96"
+  }
+]
